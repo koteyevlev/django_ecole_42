@@ -1,0 +1,10 @@
+beautifulsoup4==4.9.3
+certifi==2020.12.5
+chardet==4.0.0
+dewiki==0.1.0
+idna==2.10
+norminette==3.2.95
+path @ git+https://github.com/jaraco/path.git@b23ad440bece696572056ccc58c0118acd6ca534
+requests==2.25.1
+soupsieve==2.2.1
+urllib3==1.26.4
