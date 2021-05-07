@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex03</title>
+    <style type="text/css">
+       table {
+            border-collapse: collapse /* Цвет фона ячеек */
+       }
+       td {
+           height: 40px; /* Цвет фона таблицы */
+           width: 80px; /* Цвет текста */
+       }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>noir</th>
+            <th>rouge</th>
+            <th>bleu</th>
+            <th>vert</th>
+        </tr>
+        {% for color in color_list %}
+            <tr>
+                <td style="background-color: rgb({{ color }}, {{ color }}, {{ color }});")></td>
+                <td style="background-color: rgb({{ color }}, 0, 0);")></td>
+
+                <td style="background-color: rgb(0, 0, {{ color }});")></td>
+                <td style="background-color: rgb(0, {{ color }}, 0);")></td>
+            </tr>
+
+        {% endfor %}
+    </table>
+</body>
+</html>

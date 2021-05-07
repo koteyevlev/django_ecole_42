@@ -20,13 +20,15 @@ def valid_link(info_candidate):
 def roads_to_philosophy():
     import sys, requests
     from bs4 import BeautifulSoup
+
     argv = sys.argv
+    if len(argv) != 2:
+        return
     link = "/wiki/" + argv[1]
     if argv[1] == "Philosophy":
         print(0, "roads from", argv[1], "to philosophy !")
     headers = []
-    if len(argv) != 2:
-        return
+
     while True:
         req = requests.get("https://en.wikipedia.org" + link)
         if req.status_code != 200 or not req.text:
@@ -42,10 +44,14 @@ def roads_to_philosophy():
         info_all = parsed.body.find_all("div", {"class": "mw-parser-output"})[0].find_all("p", {"class": None})
         info = info_all[0]
         for info_candidate in info_all:
-            if info_candidate.parent.attrs["class"][0] == "mw-parser-output":
-                if valid_link(info_candidate):
-                    info = info_candidate
-                    break
+            try:
+                if info_candidate.parent.attrs["class"][0] == "mw-parser-output":
+                    if valid_link(info_candidate):
+                        info = info_candidate
+                        break
+            except Exception as e:
+                print("It leads to a dead end !")
+                return
         links = info.find_all('a')
         if len(links) == 0:
             print("It leads to a dead end !")
