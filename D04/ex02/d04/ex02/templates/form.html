@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='UTF-8'>
+		<title>Ex02</title>
+	</head>
+	<body>
+    <h1> Please fill the form</h1>
+		<form action="/ex02/" method="post">
+			{% csrf_token %}
+			{{ form }}
+			<input type="submit" value="Submit">
+		</form>
+	<h2>History</h2>
+	<ul>
+		{% for record in context %}
+			<li>{{ record }}</li>
+		{% endfor %}
+	</ul>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}Ex01: Display process of a static page.{% endblock %}
+{% block style %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style1.css' %}">
+{% endblock %}
+{% block content %}Display process of a static page.
+<p>the process causing the display of a static web page from a simple template going through a view, from the request to the answer.</p>
+<p>Now we might be able to get away with putting our static files directly in my_app/static/ (rather than creating another my_app subdirectory), but it would actually be a bad idea. Django will use the first static file it finds whose name matches, and if you had a static file with the same name in a different application, Django would be unable to distinguish between them. We need to be able to point Django at the right one, and the best way to ensure this is by namespacing them. That is, by putting those static files inside another directory named for the application itself.
+
+You can namespace static assets in STATICFILES_DIRS by specifying prefixes.</p>
+<p>Websites generally need to serve additional files such as images, JavaScript, or CSS. In Django, we refer to these files as “static files”. Django provides django.contrib.staticfiles to help you manage them.
+
+This page describes how you can serve these static files.
+
+Configuring static files¶
+Make sure that django.contrib.staticfiles is included in your INSTALLED_APPS.
+
+In your settings file, define STATIC_URL, for example:
+
+STATIC_URL = '/static/'
+In your templates, use the static template tag to build the URL for the given relative path using the configured STATICFILES_STORAGE.
+
+Store your static files in a folder called static in your app. For example my_app/static/my_app/example.jpg.</p>
+
+{% endblock %}

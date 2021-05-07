@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}Ex01: Template engine.{% endblock %}
+{% block style %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style2.css' %}">
+{% endblock %}
+{% block content %}
+<p>
+Blocks - A template is a text file. It can generate any text-based format (HTML, XML, CSV, etc.).
+</p><p>
+A template contains variables, which get replaced with values when the template is evaluated, and tags, which control the logic of the template.
+</p><p>
+Below is a minimal template that illustrates a few basics. Each element will be explained later in this document.
+</p><p>
+Loops - Produces one of its arguments each time this tag is encountered. The first argument is produced on the first encounter, the second argument on the second encounter, and so forth. Once all arguments are exhausted, the tag cycles to the first argument and produces it again.
+</p><p>
+This tag is particularly useful in a loop:
+</p><p>
+if control structures. -
+
+if¶
+
+The  tag evaluates a variable, and if that variable is “true” (i.e. exists, is not empty, and is not a false boolean value) the contents of the block are output:
+Use of actual parentheses in the if tag is invalid syntax. If you need them to indicate precedence, you should use nested if tags.
+
+if tags may also use the operators ==, !=, <, >, <=, >=, in, not in, is, and is not which work as follows:
+</p>
+{% endblock %}

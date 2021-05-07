@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Ex01: Django, framework web.{% endblock %}
+{% block style %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style1.css' %}">
+{% endblock %}
+{% block content %}
+<p>
+     Python-based free and open-source web framework that follows the model-template-views (MTV) architectural pattern.[9][10] It is maintained by the Django Software Foundation (DSF), an American independent organization established as a 501(c)(3) non-profit.
+
+</p>Django's primary goal is to ease the creation of complex, database-driven websites. The framework emphasizes reusability and "pluggability" of components, less code, low coupling, rapid development, and the principle of don't repeat yourself.[11] Python is used throughout, even for settings, files, and data models. Django also provides an optional administrative create, read, update and delete interface that is generated dynamically through introspection and configured via admin models.
+<p>
+Some well known sites that use Django include PBS,[12] Instagram,[13] Mozilla,[14] The Washington Times,[15] Disqus,[16] Bitbucket,[17] and Nextdoor.[18]
+</p>
+{% endblock %}

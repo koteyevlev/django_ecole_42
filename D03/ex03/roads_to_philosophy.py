@@ -3,7 +3,7 @@
 def get_valid_link(links):
     for i in range(len(links)):
         link = links[i].get('href')
-        if link[0] == "#" or "/wiki/Help" in link or "/wiki/File" in link:
+        if link[0] == "#" or "/wiki/Help" in link or "/wiki/File" in link or "//upload.wikimedia" in link:
             continue
         else:
             return link
@@ -51,7 +51,7 @@ def roads_to_philosophy():
             print("It leads to a dead end !")
             return
         new_link = get_valid_link(links)
-        print(new_link)
+        #print(new_link)
         link = new_link
         if header == "Philosophy":
             break
