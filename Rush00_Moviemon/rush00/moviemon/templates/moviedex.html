@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Moviedex{% endblock %}
+{% block style %}{% endblock %}
+{% block content %}
+    <h1>There is your caught Moviemons! </h1>
+
+        <h2>Moviemon</h2>
+        {% for moviemon in moviemon_list %}
+            <li><a>{{ moviemon }}</a></li>
+        {% endfor %}
+    <ul id="nav">
+        <li><a href="/$">A - More information</a></li>
+        <li><a href="..">select - Back</a></li>
+    </ul>
+{% endblock %}

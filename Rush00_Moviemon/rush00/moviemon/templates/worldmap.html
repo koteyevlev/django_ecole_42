@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}Moviemon map{% endblock %}
+{% block style %}
+      table {
+            border-collapse: collapse /* Цвет фона ячеек */
+       }
+       td {
+           height: 80px; /* Цвет фона таблицы */
+           width: 80px; /* Цвет текста */
+            border: 1px solid black;
+       }
+{% endblock %}
+{% block content %}
+    <table>
+      {% for row in rows %}
+      <tr>
+        {% for column in columns %}
+          {% if player_col == column and player_row == row%}
+            <td class="player", style="background-color: #1b1b1b"></td>
+          {% else %}
+            <td class="empty", style="background-color: yellowgreen"></td>
+          {% endif %}
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </table>
+
+    <ul>
+        Directions
+        <li><a href="">Up</a></li>
+        <li><a href="">Down</a></li>
+        <li><a href="">Right</a></li>
+        <li><a href="">Left</a></li>
+    </ul>
+
+    <ul>
+        <li><a href="../battle/2">A</a></li>
+        <li><a href="../options">start</a></li>
+        <li><a href="../moviedex">select</a></li>
+    </ul>
+
+
+{% endblock %}

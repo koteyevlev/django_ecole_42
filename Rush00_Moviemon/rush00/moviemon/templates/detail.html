@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Detail of a moviemon.{% endblock %}
+{% block style %}{% endblock %}
+{% block content %}
+    <h1>There is your Moviemon! </h1>
+
+        <h2>Moviemon</h2>
+    <ul id="nav">
+        <li><a>{{ moviemon.name }}</a></li>
+        <li><a>{{ moviemon.poster }}</a></li>
+        <li><a>{{ moviemon.director }}</a></li>
+        <li><a>{{ moviemon.year }}</a></li>
+        <li><a>{{ moviemon.rating }}</a></li>
+        <li><a>{{ moviemon.synopsis }}</a></li>
+        <li><a>{{ moviemon.actors }}</a></li>
+    </ul>
+    <ul>
+        <li><a href="../../moviedex">select - Back</a></li>
+    </ul>
+{% endblock %}
