@@ -4,7 +4,29 @@
     {% load static %}
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
     <style type="text/css">
+        ul {
+            display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-box-orient: vertical;
+              -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+              flex-direction: column;
+              padding-left: 0;
+                padding-right: 60%;
+              margin-bottom: 0;
+       }
+        li {
+            position: relative;
+            background-color: grey;
+              display: block;
+              padding: 0.75rem 1.25rem;
+              margin-bottom: -1px;
+              background-color: #fff;
+              border: 1px solid rgba(0, 0, 0, 0.125);
+        }
         {% block style %}{% endblock %}
     </style>
 </head>

@@ -3,9 +3,22 @@
 {% block style %}{% endblock %}
 {% block content %}
     <h1>Choose Your game! </h1>
-    <ul id="nav">
-        <li><a href="..">Start</a></li>
-        <li><a href="/save_game">A - Save</a></li>
-        <li><a href="..">B - Quit</a></li>
+
+    <h2>Start Continue Game</h2>
+    <h2>A - Save</h2>
+    <h2>B  - Quit</h2>
+
+    <ul class="navbar-nav mr-auto flex-wrap flex-row">
+        <li>Up</li>
+        <li>Down</li>
+        <li>Left</li>
+        <li>Right</li>
+    </ul>
+
+    <ul class="navbar-nav mr-auto flex-wrap flex-row">
+        <li><a href="../options/save_game">A</a></li>
+        <li><a href="..">B</a></li>
+        <li><a href="../worldmap">start</a></li>
+        <li>select</li>
     </ul>
 {% endblock %}

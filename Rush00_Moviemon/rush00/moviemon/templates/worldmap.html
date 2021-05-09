@@ -5,38 +5,51 @@
             border-collapse: collapse /* Цвет фона ячеек */
        }
        td {
-           height: 80px; /* Цвет фона таблицы */
-           width: 80px; /* Цвет текста */
+           height: 85px; /* Цвет фона таблицы */
+           width: 85px; /* Цвет текста */
             border: 1px solid black;
        }
 {% endblock %}
 {% block content %}
-    <table>
+    <h2> Find All Moviemon and catch them!</h2>
+    <ul class="navbar-nav mr-auto flex-wrap flex-row" style="padding-right: 2%;">
+        <li>Movieballs: {{ movieballs }}</li>
+        <li><b>Message: {{ message }}</b></li>
+        <li>Player Strength: {{ strength }}</li>
+
+    </ul>
+    <table style="background-image: url(../static/img/map.jpg)">
       {% for row in rows %}
       <tr>
         {% for column in columns %}
           {% if player_col == column and player_row == row%}
-            <td class="player", style="background-color: #1b1b1b"></td>
+            {% load static %}
+            <td class="player", style="background-image: url(../static/img/badcomedian.jpg)"></td>
           {% else %}
-            <td class="empty", style="background-color: yellowgreen"></td>
+            <td class="empty"></td>
           {% endif %}
         {% endfor %}
       </tr>
       {% endfor %}
     </table>
 
-    <ul>
-        Directions
-        <li><a href="">Up</a></li>
-        <li><a href="">Down</a></li>
-        <li><a href="">Right</a></li>
-        <li><a href="">Left</a></li>
+    <h3>A - battle</h3>
+    <h3>start options</h3>
+    <h3>select Moviedex</h3>
+
+    <ul class="navbar-nav mr-auto flex-wrap flex-row">
+        <li><a href="worldmap/up">Up</a></li>
+        <li><a href="worldmap/down">Down</a></li>
+        <li><a href="worldmap/left">Left</a></li>
+        <li><a href="worldmap/right">Right</a></li>
     </ul>
 
-    <ul>
-        <li><a href="../battle/2">A</a></li>
+    <ul class="navbar-nav mr-auto flex-wrap flex-row">
+        <li><a href="../battle/{{ movie_id }}">A</a></li>
+        <li>B</li>
         <li><a href="../options">start</a></li>
-        <li><a href="../moviedex">select</a></li>
+        <li><a href="../moviedex">select</a> </li>
+
     </ul>
 
 

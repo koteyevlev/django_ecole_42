@@ -4,15 +4,15 @@
 {% block content %}
     <h1>Fight!</h1>
     <h3>Info about battle</h3>
-    <ul id="nav">
-        <li><a>Moviemon Strength {{ moviemon.strength }}</a></li>
-        <li><a>{{ moviemon.poster }}</a></li>
-        <li><a>Movieballs - {{ player.movieballs }}</a></li>
-        <li><a>Player Strength {{ player.strength }}</a></li>
+    <ul>
+        <li><a>Moviemon Strength {{ rating }}</a></li>
+        <li><a><img src={{ poster }} alt="Nice cock" /></a></li>
+        <li><a>Movieballs - {{ movieballs }}</a></li>
+        <li><a>Player Strength {{ strength }}</a></li>
         <li><a>Winning Rate {{ winning_rate }}</a></li>
     </ul>
     <ul>
-        <li><a href="">A : Throw a movieball</a></li>
-        <li><a href="../../worldmap">B: Returns to Worldmap</a></li>
+        <li><a href="throw">A</a> : Throw a movieball</li>
+        <li><a href="../../worldmap">B</a> : Returns to Worldmap</li>
     </ul>
 {% endblock %}

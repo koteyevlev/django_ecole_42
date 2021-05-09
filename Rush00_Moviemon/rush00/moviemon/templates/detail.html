@@ -6,15 +6,15 @@
 
         <h2>Moviemon</h2>
     <ul id="nav">
-        <li><a>{{ moviemon.name }}</a></li>
-        <li><a>{{ moviemon.poster }}</a></li>
-        <li><a>{{ moviemon.director }}</a></li>
-        <li><a>{{ moviemon.year }}</a></li>
-        <li><a>{{ moviemon.rating }}</a></li>
-        <li><a>{{ moviemon.synopsis }}</a></li>
-        <li><a>{{ moviemon.actors }}</a></li>
+        <li><a>Movie: {{ moviemon.name }}</a></li>
+        <li><a><img src={{ moviemon.poster }} /></a></li>
+        <li><a>Director: {{ moviemon.director }}</a></li>
+        <li><a>Year: {{ moviemon.year }}</a></li>
+        <li><a>IMDb Rating: {{ moviemon.rating }}</a></li>
+        <li><a>Synopsis: {{ moviemon.synopsis }}</a></li>
+        <li><a>Actors: {{ moviemon.actors }}</a></li>
     </ul>
     <ul>
-        <li><a href="../../moviedex">select - Back</a></li>
+        <li><a href="../../moviedex">select</a> - Back</li>
     </ul>
 {% endblock %}

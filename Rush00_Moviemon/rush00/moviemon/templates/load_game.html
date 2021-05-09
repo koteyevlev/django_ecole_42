@@ -3,12 +3,40 @@
 {% block style %}{% endblock %}
 {% block content %}
     <h1>Choose Your game! </h1>
-    <ul id="nav">
-        <li><a href="">Slot A</a></li>
-        <li><a href="">Slot B</a></li>
-        <li><a href="">Slot C</a></li>
-        <li><a href="">A - Load</a></li>
-        <li><a href="../worldmap">A - Start Game</a></li>
-        <li><a href="../options">B - Quit</a></li>
+    <ul>
+        {% if picked == 0 %}
+        <li style="background-color: grey;">Slot A {{ slotA }}</li>
+        {% else %}
+        <li>Slot A {{ slotA }}</li>
+        {% endif %}
+        {% if picked == 1 %}
+        <li style="background-color: grey;">Slot B {{ slotB }}</li>
+        {% else %}
+        <li>Slot B {{ slotB }}</li>
+        {% endif %}
+        {% if picked == 2 %}
+        <li style="background-color: grey;">Slot C {{ slotC }}</li>
+        {% else %}
+        <li>Slot C {{ slotC }}</li>
+        {% endif %}
+
+    </ul>
+
+    <h2>A - Start Game</h2>
+    <h2>A - Load</h2>
+    <h2>B - Quit</h2>
+
+    <ul class="navbar-nav mr-auto flex-wrap flex-row">
+        <li><a href="load_game/up">Up</a></li>
+        <li><a href="load_game/down">Down</a></li>
+        <li>Left</li>
+        <li>Right</li>
+    </ul>
+
+    <ul class="navbar-nav mr-auto flex-wrap flex-row">
+        <li><a href="load_game/load">A</a> - Load</li>
+        <li><a href="../options">B</a></li>
+        <li>start</li>
+        <li>select</li>
     </ul>
 {% endblock %}

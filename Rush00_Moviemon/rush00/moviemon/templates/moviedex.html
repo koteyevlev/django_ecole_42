@@ -6,10 +6,23 @@
 
         <h2>Moviemon</h2>
         {% for moviemon in moviemon_list %}
-            <li><a>{{ moviemon }}</a></li>
+            <li><a href="../moviedex/{{ moviemon.movie_id }}"><img src="{{ moviemon.poster }} alt="Nice cock" /></a></li>
         {% endfor %}
-    <ul id="nav">
-        <li><a href="/$">A - More information</a></li>
-        <li><a href="..">select - Back</a></li>
+
+    <h2>A - More information</h2>
+    <h2>B - Back</h2>
+
+    <ul class="navbar-nav mr-auto flex-wrap flex-row">
+        <li>Up</li>
+        <li>Down</li>
+        <li>Left</li>
+        <li>Right</li>
+    </ul>
+
+    <ul class="navbar-nav mr-auto flex-wrap flex-row">
+        <li><a href="">A</a></li>
+        <li><a href="../worldmap">B</a></li>
+        <li>start</li>
+        <li>select</li>
     </ul>
 {% endblock %}
