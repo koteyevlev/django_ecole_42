@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Data</title>
+    </head>
+    <body>
+        <form method="POST">
+            {% csrf_token %}
+            <select name="movies">
+                {% for film in data %}
+                <option value="{{ film.1 }}">{{film.0}}</option>
+                {% endfor %}
+            </select>
+            <input type='submit', value="remove">
+        </form>
+    </body>
+</html>

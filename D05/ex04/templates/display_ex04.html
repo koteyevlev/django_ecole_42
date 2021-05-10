@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Data</title>
+    </head>
+    <body>
+    <div class="content container">
+        <div class="row">
+            <table>
+                <th>title</th>
+                <th>episode_nb</th>
+                <th>opening_crawl</th>
+                <th>director</th>
+                <th>producer</th>
+                <th>release_date</th>
+            {% for row in data %}
+                <tr>
+                  {% for el in row %}
+                    <td>{{ el }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+            </table>
+        </div>
+    </div>
+</body>
+</html>
