@@ -1,0 +1,23 @@
+appdirs==1.4.4
+asgiref==3.3.4
+beautifulsoup4==4.9.3
+certifi==2020.12.5
+chardet==4.0.0
+dewiki==0.1.0
+distlib==0.3.1
+Django==3.2.2
+filelock==3.0.12
+idna==2.10
+importlib-metadata==4.0.1
+norminette==3.2.95
+path @ git+https://github.com/jaraco/path.git@b23ad440bece696572056ccc58c0118acd6ca534
+psycopg2==2.7.7
+pytz==2021.1
+requests==2.25.1
+six==1.16.0
+soupsieve==2.2.1
+sqlparse==0.4.1
+typing-extensions==3.10.0.0
+urllib3==1.26.4
+virtualenv==20.4.6
+zipp==3.4.1
